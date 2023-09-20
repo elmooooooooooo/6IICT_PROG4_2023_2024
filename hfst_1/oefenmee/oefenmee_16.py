@@ -15,3 +15,8 @@ landen_feiten = {
         'taal': 'Duits',
     }
 }
+
+for land, feiten in landen_feiten.items():
+    print(land)
+    for sleutel, waarde in feiten.items():
+        print(waarde)

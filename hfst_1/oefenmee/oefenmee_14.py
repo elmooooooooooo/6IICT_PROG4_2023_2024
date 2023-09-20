@@ -7,6 +7,7 @@ spelinfo = {
             'y': 5
         },
         'inventaris': {
+            'bepantsering': 'schild',
             'wapen': 'zwaard',
             'goud': 50
         }
@@ -23,3 +24,14 @@ spelinfo = {
         }
     }
 }
+
+print(spelinfo['speler2']['naam'])
+print(spelinfo['speler2']['positie']['x'])
+print(spelinfo['speler2']['positie']['y'])
+print(spelinfo['speler2']['inventaris']['wapen'])
+
+spelinfo['speler2']['inventaris']['goud'] = 0
+spelinfo['speler2']['hacker'] = True
+spelinfo['speler1']['hacker'] = False
+
+print(spelinfo)
