@@ -4,5 +4,6 @@ import requests, json
 url = "https://api.adviceslip.com/advice/search/api"
 response_json = requests.get(url).json()
 
-with open("VUL AAN"):
-    "VUL AAN"
+with open("hfst_2/oefenmee/bericht_advice.json", "w") as fp:
+    json.dump(response_json, fp)
+    print("Data gedumpt!")
