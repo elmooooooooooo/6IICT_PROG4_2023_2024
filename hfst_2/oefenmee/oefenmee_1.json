@@ -1,20 +1,59 @@
 {
-    "error": false, 
-    "category": "Pun", 
-    "type": "twopart", 
-    "setup": "Where do sick cruise ships go to get healthy?", 
-    "delivery": "the dock!",
+    "error": false,
+    "amount": 3,
+    "jokes": [
+        {
+            "category": "Christmas",
+            "type": "twopart",
+            "setup": "Who is Santa's favourite singer?",
+            "delivery": "Elf-is Presley!",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 246,
+            "safe": true,
+            "lang": "en"
+        },
+        {
+            "category": "Christmas",
+            "type": "twopart",
+            "setup": "Whats the Grinchs least favorite band?",
+            "delivery": "The Who.",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "safe": true,
+            "id": 293,
+            "lang": "en"
+        },
+        {
+            "category": "Christmas",
+            "type": "twopart",
+            "setup": "What do elves post on Social Media?",
+            "delivery": "Elf-ies!",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 249,
+            "safe": true,
+            "lang": "en"
+        }
+    ]
+}
 
-    "flags": {
-
-        "nsfw": false,
-        "religious": false, 
-        "political": true, 
-        "racist": false, 
-        "sexist": false, 
-        "explicit": false
-        }, 
-        "id": 212, 
-        "safe": true, 
-        "lang": "en"
-    }
+    
