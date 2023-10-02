@@ -24,3 +24,5 @@ while kerstgrap < 3:
         print(response_json["jokes"][kerstgrap]["delivery"]) # De punchline
     kerstgrap = kerstgrap + 1
     grap = grap + 1
+
+input("doe op enter om te sluiten: ")
