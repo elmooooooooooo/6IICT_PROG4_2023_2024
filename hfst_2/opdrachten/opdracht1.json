@@ -1,1 +1,18 @@
-{"error": false, "category": "Spooky", "type": "twopart", "setup": "Why did the ghost go to the bar?", "delivery": "To get sheet faced.", "flags": {"nsfw": false, "religious": false, "political": false, "racist": false, "sexist": false, "explicit": true}, "safe": false, "id": 315, "lang": "en"}
+{
+  "error": false,
+  "category": "Dark",
+  "type": "twopart",
+  "setup": "What do Japanese cannibals eat?",
+  "delivery": "Raw men.",
+  "flags": {
+    "nsfw": true,
+    "religious": false,
+    "political": false,
+    "racist": false,
+    "sexist": false,
+    "explicit": true
+  },
+  "id": 79,
+  "safe": false,
+  "lang": "en"
+}
