@@ -49,9 +49,12 @@ De print moet er als volgt uitzien.
 Tip! Maak eerst een nieuwe variabele met de waarde van sleutel "prijzen".
      Overloop deze met een for-loop.
 """
-prijzenlijst = {"prijzen": {"academy awards": 1, "BAFTA awards": 1}}
+# prijzenlijst = {"prijzen": {"academy awards": 1, "BAFTA awards": 1}}
 
-for index, prijzen in prijzenlijst.items():
-    print(f"""Prijzen voor de film Shrek:
-    -{prijzen}
-""")
+# for s, prijzen in prijzenlijst.items():
+#     print(f"""Prijzen voor de film Shrek:
+#     -{prijzen}
+# """)
+
+for award, aantal in shrek_movie["prijzen"].items():
+    print(award,aantal)
