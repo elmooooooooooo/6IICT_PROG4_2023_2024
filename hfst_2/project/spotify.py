@@ -14,7 +14,9 @@ headers = {
     'Authorization': f'Bearer {access_token}',
 }
 
-response_json = requests.get('https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg', headers=headers).json()
+user = input("geef een artist: ")
+
+response_json = requests.get(f'https://api.spotify.com/v1/artists/{user}', headers=headers).json()
 print(response_json)
 
 print(access_token)
