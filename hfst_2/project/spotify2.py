@@ -2,8 +2,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 # Define your Spotify API credentials
-client_id = 'YOUR_CLIENT_ID'
-client_secret = 'YOUR_CLIENT_SECRET'
+client_id = '4cc048fb419440f5951860cf0a9f9db0'
+client_secret = '763a491995ce4b1cad73ecccd6bb9ade'
 redirect_uri = 'YOUR_REDIRECT_URI'  # This should be a URL you've registered with your Spotify Developer application
 
 # Initialize the Spotify client with OAuth2 authentication
