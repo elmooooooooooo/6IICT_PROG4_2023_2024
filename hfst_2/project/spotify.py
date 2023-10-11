@@ -1,4 +1,5 @@
-import requests, json
+import json
+import requests
 
 data = {
     'grant_type': 'client_credentials',
@@ -9,14 +10,17 @@ data = {
 response_json = requests.post('https://accounts.spotify.com/api/token', data=data).json()
 access_token = response_json["access_token"]
 
-
 headers = {
     'Authorization': f'Bearer {access_token}',
 }
+artist_name = input("typ een artist: ")
+url = "https://api.spotify.com/v1/search?q={artist_name}&type=artist&limit=1"
 
-user = input("geef een artist: ")
+result= requests.get(url, headers)
+json_result = json.loads(result.content)
+print(json_result)
 
-response_json = requests.get(f'https://api.spotify.com/v1/artists/{user}', headers=headers).json()
+response_json = requests.get(f'https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg', headers=headers).json()
+
 print(response_json)
-
-print(access_token)
+print(access_token, artist_name)

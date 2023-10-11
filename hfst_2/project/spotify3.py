@@ -6,19 +6,15 @@ data = {
     'client_secret': '763a491995ce4b1cad73ecccd6bb9ade',
 }
 
-
 response_json = requests.post('https://accounts.spotify.com/api/token', data=data).json()
 access_token = response_json["access_token"]
 
 headers = {
-    'Authorization': f'Bearer {access_token}',
+    'Authorization': 'Bearer 1POdFZRZbvb...qqillRxMr2z',
 }
 
-response_json = requests.post('https://api.spotify.com/v1/search', headers=headers).json()
-artist_name = response_json["artist_name"]
-
-response_json = requests.get(f'https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg', headers=headers).json()
+response = requests.get('https://api.spotify.com/v1/me', headers=headers).json()
+information = response
 
 print(access_token)
-print(response_json, "ACDC")
-
+print(information)
