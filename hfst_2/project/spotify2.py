@@ -42,6 +42,31 @@ while True:
         for index, track in enumerate(top_tracks):
             print(f'{index + 1}: {track["name"]}')
 
+        related_artist = input("gerelateerden artiesten bekijken? ja of nee: ")
+
+        if related_artist == "nee":
+            continue
+        if related_artist == "ja":
+            related_artists = requests.get(
+                f'https://api.spotify.com/v1/artists/{get_artist[0]["id"]}/related-artists', headers=headers).json()["artists"][0]["name"]
+
+            print(related_artists)
+
+        related_artists_id = requests.get(
+            f'https://api.spotify.com/v1/artists/{get_artist[0]["id"]}/related-artists', headers=headers).json()["artists"][0]["id"]
+
+        toptracks_relatedartist = input(
+            "wil je de top tracks van deze artist ook weten? Ja of nee: ")
+
+        if toptracks_relatedartist == "nee":
+            continue
+        if toptracks_relatedartist == "ja":
+            top_tracks_related_artist = requests.get(
+                f'https://api.spotify.com/v1/artists/{related_artists_id}/top-tracks?country=US', headers=headers).json()["tracks"]
+
+            for index, track in enumerate(top_tracks_related_artist):
+                print(f'{index + 1}: {track["name"]}')
+
     if keuze_gebruiker == 2:
 
         artist_name = input("type an artist: ")
