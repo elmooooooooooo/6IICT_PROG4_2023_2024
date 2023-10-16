@@ -12,7 +12,7 @@ def maak_label():
     label.pack()
 
 # 1) Knop aanmaken.
-knop = tk.Button(master=app, text="Klik op mij!", command=maak_label)
+knop = tk.Button(master=app, text="Klik op mij!", command=(maak_label))
 # 2) Knop plaatsen.
 knop.pack()
 
