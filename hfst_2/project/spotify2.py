@@ -20,15 +20,6 @@ response_json = requests.get(
 
 while True:
 
-    artist_name = input("type an artist: ")
-
-
-    get_artist = requests.get(
-        f'https://api.spotify.com/v1/search?q={artist_name}&type=artist&limit=1', headers=headers).json()["artists"]["items"]
-
-    if len(get_artist) == 0:
-        print("no artist found with this name")
-
     keuze_gebruiker = int(input("""kies een optie: 
     1: Top-Tracks
     2: nog niks
@@ -37,6 +28,14 @@ while True:
                 : """))
 
     if keuze_gebruiker == 1:
+        artist_name = input("type an artist: ")
+        get_artist = requests.get(
+            f'https://api.spotify.com/v1/search?q={artist_name}&type=artist&limit=1', headers=headers).json()["artists"]["items"]
+
+        if len(get_artist) == 0:
+            print("no artist found with this name")
+            continue
+
         top_tracks = requests.get(
             f'https://api.spotify.com/v1/artists/{get_artist[0]["id"]}/top-tracks?country=US', headers=headers).json()["tracks"]
 
@@ -52,3 +51,6 @@ while True:
     if keuze_gebruiker == 4:
         break
 
+    # else:
+     #   print("Hayn kaf kef lam meem nun ha wa ya")
+      #  continue
