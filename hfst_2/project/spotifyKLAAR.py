@@ -22,8 +22,9 @@ while True:
 
     keuze_gebruiker = int(input("""kies een optie: 
     1: Top-Tracks
-    2: Album
-    3: STOP
+    2: Album van een bepaalde artiest
+    3: random Album zoeken
+    4: STOP
                 : """))
 
     if keuze_gebruiker == 1:
@@ -83,4 +84,22 @@ while True:
         print(albums)
 
     if keuze_gebruiker == 3:
+       
+        album_name = input("typ een album naam: ")
+
+        get_album = requests.get(
+            f'https://api.spotify.com/v1/search?q={album_name}&type=album&limit=1', headers=headers).json()["albums"]["items"]
+
+        print(f'name artist: {get_album[0]["artists"][0]["name"]}')
+
+        album_track = input("wil je een track van deze album? ja of nee: ")
+
+        if album_track == "ja":
+
+            get_album_tracks = requests.get(
+                f'https://api.spotify.com/v1/albums/{get_album[0]["id"]}/tracks?offset=0&limit=20', headers=headers).json()["items"][0]["name"]
+
+            print(get_album_tracks)
+
+    if keuze_gebruiker == 4:
         break
