@@ -7,9 +7,9 @@ import tkinter as tk
 app = tk.Tk()
 
 # Functie maakt & plaatst een label.
-    def maak_label():
-        label = tk.Button(master=app, text="Goed gedaan!", command=maak_label)
-        label.pack()
+def maak_label():
+    label = tk.Button(master=app, text="Goed gedaan!", command=maak_label)
+    label.pack()
 
 # 1) Knop aanmaken.
     # master: geef aan tot welke GUI de knop behoort.

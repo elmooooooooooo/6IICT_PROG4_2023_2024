@@ -79,12 +79,13 @@ while True:
             continue
 
         albums = requests.get(
-            f'https://api.spotify.com/v1/artists/{get_artist[0]["id"]}/albums?&country=US&limit=50', headers=headers).json()["items"][0]["name"]
+            f'https://api.spotify.com/v1/artists/{get_artist[0]["id"]}/albums?&country=US&limit=10', headers=headers).json()["items"]
 
-        print(albums)
+        for album in albums:
+            print(f'- {album["name"]}')
 
     if keuze_gebruiker == 3:
-       
+
         album_name = input("typ een album naam: ")
 
         get_album = requests.get(
@@ -97,9 +98,11 @@ while True:
         if album_track == "ja":
 
             get_album_tracks = requests.get(
-                f'https://api.spotify.com/v1/albums/{get_album[0]["id"]}/tracks?offset=0&limit=20', headers=headers).json()["items"][0]["name"]
+                f'https://api.spotify.com/v1/albums/{get_album[0]["id"]}/tracks?offset=0&limit=20', headers=headers).json()["items"]
 
-            print(get_album_tracks)
+            for track in get_album_tracks:
+                track["name"]
+                print(f"    - {track['name']}")
 
     if keuze_gebruiker == 4:
         break
