@@ -22,8 +22,8 @@ while True:
 
     keuze_gebruiker = int(input("""kies een optie: 
     1: Top-Tracks
-    2: Album van een bepaalde artiest
-    3: random Album zoeken
+    2: Albums van een bepaalde artiest
+    3: artiest van een Album zoeken
     4: STOP
                 : """))
 
@@ -93,7 +93,10 @@ while True:
 
         print(f'name artist: {get_album[0]["artists"][0]["name"]}')
 
-        album_track = input("wil je een track van deze album? ja of nee: ")
+        album_track = input("wil je tracks van deze album? ja of nee: ")
+
+        if album_track == "nee":
+            continue
 
         if album_track == "ja":
 
