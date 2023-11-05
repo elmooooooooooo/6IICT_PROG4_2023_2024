@@ -14,6 +14,9 @@ resultaat = 0
 
 # Toont het resultaat in het Label label_result.
 def toon_resultaat():
+    som = getal_1 + getal_2
+    label_result.config(text= f"Het huidige resultaat is: {som}")
+
     """ TODO:
     Deze functie is gelinkt aan de Button knop.
 
@@ -56,6 +59,7 @@ knop = tk.Button(master=app, command=toon_resultaat, text="Bereken resultaat:", 
 knop.grid(row=2, column=0, columnspan=2, pady=10)
 
 # Label met resultaat maken & plaatsen.
+
 label_result = tk.Label(master=app, text=f"Het huidige resultaat is: {resultaat}", height=2, width=50)
 label_result.grid(row=3, column=0, columnspan=2, pady=2)
 
