@@ -1,28 +1,26 @@
 # Pas de URL aan zoals aangegeven in de verschillende niveau's.
-import requests
-import json
+import requests,json
 
-
-kerstgrap = 0
 grap = 1
+joke = 0
+# Bepaal of de grap uit 1 of 2 delen bestaat.
 
 
-while kerstgrap < 3:
-   
-   url = "https://v2.jokeapi.dev/joke/Christmas?amount=3"
-   response_json = requests.get(url).json() # Haal JSON uit response.
+url = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=political&amount=3"
+response_json = requests.get(url).json() # Haal JSON uit response.
 
-   with open(f"oefenmee_1.json", "w") as fp:
-    json.dump(response_json, fp)
+with open("hfst_2/oefenmee/JOKE.json", "w") as fp:
+  json.dump(response_json, fp)
+
+while joke <3:
+  print(f"Grap {grap}: ")
+  if ("joke" in response_json["jokes"][joke]):
+    print(response_json["jokes"][joke]["joke"])     # De grap
+    joke = joke+1
+  else:
+    print(response_json["jokes"][joke]["setup"])    # De setup
+    print(response_json["jokes"][joke]["delivery"]) # De punchline
+    joke= joke +1
+  grap= grap+1
 
 
-    # Bepaal of de grap uit 1 of 2 delen bestaat.
-    if ("joke" in response_json):
-        print(response_json["joke"])     # De grap
-    else:
-        print(f'grap{grap}: {response_json["jokes"][kerstgrap]["setup"]}')  # De setup
-        print(response_json["jokes"][kerstgrap]["delivery"]) # De punchline
-    kerstgrap = kerstgrap + 1
-    grap = grap + 1
-
-input("doe op enter om te sluiten: ")

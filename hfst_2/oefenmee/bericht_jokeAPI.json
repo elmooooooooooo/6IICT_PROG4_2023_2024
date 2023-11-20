@@ -1,1 +1,18 @@
-{"error": false, "category": "Pun", "type": "twopart", "setup": "Did you hear about the cheese factory that exploded in France?", "delivery": "There was nothing but de brie.", "flags": {"nsfw": false, "religious": false, "political": false, "racist": false, "sexist": false, "explicit": false}, "id": 65, "safe": true, "lang": "en"}
+{
+    "error": false,
+    "category": "Programming",
+    "type": "twopart",
+    "setup": "How did you make your friend rage?",
+    "delivery": "I implemented a greek question mark in his JavaScript code.",
+    "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+    },
+    "id": 147,
+    "safe": true,
+    "lang": "en"
+}

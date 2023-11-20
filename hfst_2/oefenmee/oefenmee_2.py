@@ -12,5 +12,5 @@ response_json = response.json()
 if "joke" in response_json:
     print(response_json["joke"])
 else:
-    print(response_json["setup"])    # De setup
-    print(response_json["delivery"]) # De punchline
+   print(response_json["setup"])    # De setup
+   print(response_json["delivery"]) # De punchline

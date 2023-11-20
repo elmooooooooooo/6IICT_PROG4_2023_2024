@@ -1,0 +1,18 @@
+{
+    "error": false,
+    "category": "Pun",
+    "type": "twopart",
+    "setup": "Where do sick cruise ships go to get healthy?",
+    "delivery": "The dock!",
+    "flags": {
+        "nsfw": true,
+        "religious": true,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+    },
+    "id": 212,
+    "safe": false,
+    "lang": "en"
+}
