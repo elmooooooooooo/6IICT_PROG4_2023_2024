@@ -1,41 +1,73 @@
 import tkinter as tk
 
+app = tk.Tk()
+
+invoer = tk.StringVar()
+
+def som(cijfer):
+    huidige_invoer = invoer.get()
+    nieuwe_invoer = huidige_invoer + str(cijfer)
+    invoer.set(nieuwe_invoer)
+
+def voeg_operator_toe(operator):
+    huidige_invoer = invoer.get()
+    nieuwe_invoer = huidige_invoer + " " + operator + " "
+    invoer.set(nieuwe_invoer)
+
+def wis_invoer():
+    invoer.set("")
+
 def bereken():
     try:
-        invoer = invoerveld.get()
-        resultaat = eval(invoer)
-        resultaat_label.config(text="Resultaat: " + str(resultaat))
+        resultaat = eval(invoer.get())
+        invoer.set(resultaat)
     except Exception as e:
-        resultaat_label.config(text="Fout: Ongeldige invoer")
+        invoer.set("Fout")
+    
+veld = tk.Entry(master=app, background="green", textvariable=invoer)
+veld.grid(row=0, column=0, columnspan=3)
 
-# Maak het hoofdvenster
-venster = tk.Tk()
-venster.title("Rekenmachine")
+knop1 = tk.Button(master=app, text="1", width=5, height=2, command=lambda: som(1))
+knop1.grid(row=2, column=0)
 
-# Invoerveld
-invoerveld = tk.Entry(venster, width=20)
-invoerveld.grid(row=0, column=0, columnspan=4)
+knop2 = tk.Button(master=app, text="2", width=5, height=2, command=lambda: som(2))
+knop2.grid(row=2, column=1)
 
-# Resultaatlabel
-resultaat_label = tk.Label(venster, text="Resultaat: ")
-resultaat_label.grid(row=1, column=0, columnspan=4)
+knop3 = tk.Button(master=app, text="3", width=5, height=2, command=lambda: som(3))
+knop3.grid(row=2, column=2)
 
-# Knoppen
-knoppen = [
-    '7', '8', '9', '/',
-    '4', '5', '6', '*',
-    '1', '2', '3', '-',
-    '0', '.', '=', '+'
-]
+knop4 = tk.Button(master=app, text="4", width=5, height=2, command=lambda: som(4))
+knop4.grid(row=3, column=0)
 
-row_val = 2
-col_val = 0
+knop5 = tk.Button(master=app, text="5", width=5, height=2, command=lambda: som(5))
+knop5.grid(row=3, column=1)
 
-for knop in knoppen:
-    tk.Button(venster, text=knop, padx=20, pady=20, command=lambda knop=knop: invoerveld.insert(tk.END, knop) if knop != '=' else bereken()).grid(row=row_val, column=col_val)
-    col_val += 1
-    if col_val > 3:
-        col_val = 0
-        row_val += 1
+knop6 = tk.Button(master=app, text="6", width=5, height=2, command=lambda: som(6))
+knop6.grid(row=3, column=2)
 
-venster.mainloop()
+knop7 = tk.Button(master=app, text="7", width=5, height=2, command=lambda: som(7))
+knop7.grid(row=4, column=0)
+
+knop8 = tk.Button(master=app, text="8", width=5, height=2, command=lambda: som(8))
+knop8.grid(row=4, column=1)
+
+knop9 = tk.Button(master=app, text="9", width=5, height=2, command=lambda: som(9))
+knop9.grid(row=4, column=2)
+
+knop0 = tk.Button(master=app, text="0", width=5, height=2, command=lambda: som(0))
+knop0.grid(row=5, column=0)
+
+knopplus = tk.Button(master=app, text="+", width=5, height=2, command=lambda: voeg_operator_toe('+'))
+knopplus.grid(row=5, column=1)
+
+knopmin = tk.Button(master=app, text="-", width=5, height=2, command=lambda: voeg_operator_toe('-'))
+knopmin.grid(row=5, column=2)
+
+knopgelijk = tk.Button(master=app, text="=", width=5, height=2, command=bereken)
+knopgelijk.grid(row=6, column=0)
+
+knopgelijk = tk.Button(master=app, text="CLR", width=12, height=2, command=wis_invoer)
+knopgelijk.grid(row=6, column=1, columnspan=2)
+
+app.mainloop()
+
