@@ -1,4 +1,4 @@
-""" Oefening 3 (  / 8): klikker app.
+""" Oefening 3 (  / 8): klikker-app
 
 Baseer je op oefening_3.exe om de klikkerapp op te bouwen.
 Onderstaande vereisten bevatten de zaken waar je zeker op moet letten.
@@ -24,28 +24,33 @@ import tkinter as tk
 app = tk.Tk()
 app.title("Klikker-spel")
 
+teller = 0
+def verhoog_teller():
+    global teller
 
-counter = 0
-def teller():
-  global counter
-  invoer.get()
-  counter += 1
-  invoer.set(str(counter))
+    hoeveelheid = hoeveelheid_entry.get()
 
-  if counter % 2 == 0:
-    veld.config(fg="green")
-  else:
-    veld.config(fg="red")
+    if not hoeveelheid.isnumeric():
+        teller = 0
+    else:
+        teller += int(hoeveelheid)
 
+    if teller % 2 == 0:
+        teller_label.config(fg="green", text=f"Teller: {teller}")
+    else:
+        teller_label.config(fg="red", text=f"Teller: {teller}")
 
+uitleghoeveelheid_label = tk.Label(app, text="Teller verhogen met: ")
+uitleghoeveelheid_label.grid(row=0,column=0)
+hoeveelheid_entry       = tk.Entry(app)
+hoeveelheid_entry.insert(0,"0")
+hoeveelheid_entry.grid(row=0,column=1)
 
-invoer = tk.StringVar()
-invoer.set(str(counter))
-veld = tk.Entry(master=app, background="white", width=100, textvariable=invoer)
-veld.grid(row=0, column=0)
-veld.config(fg="green")
+verhoog_button = tk.Button(app, text="Verhoog de teller!", command=verhoog_teller, width=15)
+verhoog_button.grid(row=1, column=0, columnspan=2)
 
-knop1 = tk.Button(master=app, text="klik", command=teller)
-knop1.grid(column=0, row=1)
+teller_label = tk.Label(app, text="Teller: 0", fg="green", font=("Helvetica",15))
+teller_label.config(fg="green")
+teller_label.grid(row=2, column=0, columnspan=2, pady=(10,10))
 
 app.mainloop()
