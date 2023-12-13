@@ -1,0 +1,18 @@
+{"url": "https://www.wholegraindigital.com/",
+ "green": true,
+  "bytes": 328568,
+   "cleanerThan": 0.93,
+   "rating": "A+",
+    "statistics": {
+        "adjustedBytes": 248068.84,
+        "energy": 0.0001871360097080469,
+        "co2": 
+        {
+            "grid": {"grams": 0.08271411629095674,
+            "litres": 0.046005591481030124},
+            "renewable": {"grams": 0.07171051892012358,
+            "litres": 0.03988539062337273
+        }
+        }
+    },
+        "timestamp": 1702453403}
