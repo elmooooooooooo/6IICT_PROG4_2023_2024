@@ -6,7 +6,13 @@ try:
     else:
         getal = int( getal )
     print( fruit_lijst[getal] )
-except Exception:
-    print( "Er ging iets fout" ) 
-
+except ZeroDivisionError:
+    print( "Wie deelt door 0 is een snul. ")
+except  ValueError:
+    print( "geef een getal op: " )
+except IndexError:
+    print( "kleinere getal" ) 
+except:
+    print("Geen ctrl c")
+    
 print("Programma klaar") 
