@@ -11,10 +11,10 @@ while vragen_totaal != vragen_gesteld:
 
         "VUL VERDER AAN NIVEAU 1"
     except Exception:
-        "VUL AAN NIVEAU 2"
+        "Je kan ctrl c doen om af te sluiten."
     else:
-        "VUL AAN NIVEAU 2"
+        "Alleen als er geen exception is"
     finally:
-        "VUL AAN NIVEAU 3"
+        "Deze gaat sowieso"
 
 print("Quiz afgelopen.")

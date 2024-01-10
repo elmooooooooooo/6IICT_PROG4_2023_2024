@@ -9,7 +9,11 @@ menu = {
     "super taco": 8.00,
     "tortilla salade": 8.00
 }
+bestelling = {}
 
 totaal = 0
 while True:
-    "TODO: vul aan op basis van uitleg in OneNote"
+    gerecht = input("Noem een gerecht: ")
+
+    print(f"{menu[gerecht]} euro")
+    bestelling.append(menu[gerecht])
