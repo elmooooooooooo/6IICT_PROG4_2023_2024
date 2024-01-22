@@ -4,7 +4,7 @@ class Kat:
     naam = "Borysz"
 
     def miauw(self):
-        print(f"{kitten.naam} zegt miauw")
+        print(f"{kitten.naam} zegt miauw") #FOUT MELDING kitten moet self zijn.
 
 kater = Kat()
 kater.miauw() 
