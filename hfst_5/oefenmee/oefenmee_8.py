@@ -3,9 +3,9 @@
 
 " Startcode: "
 
-# # import raspberry pi GPIO module
-# import RPi.GPIO as GPIO
-# import time
+#import raspberry pi GPIO module
+#import RPi.GPIO as GPIO
+#import time
 
 # # setup pin 7 & 31 as output
 # GPIO.setup(7, GPIO.OUT)
