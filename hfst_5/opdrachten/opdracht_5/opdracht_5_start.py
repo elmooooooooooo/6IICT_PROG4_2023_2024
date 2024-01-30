@@ -12,9 +12,9 @@ frame = pygame.display.set_mode((frame_breedte, frame_hoogte))
 # Zet alle benodigde afbeeldingen & hun startposities klaar.
 # x_kogels & y_kogels zijn lijsten omdat ze de posities van alle geschoten kogels zullen bevatten.
 x_vlieg, y_vlieg, snelheid_vlieg = 0, frame_hoogte//2, 5
-afb_vlieg = pygame.image.load(r"vliegtuig.png")
+afb_vlieg = pygame.image.load(r"hfst_5\opdrachten\opdracht_5\vliegtuig.png")
 x_kogels, y_kogels, snelheid_kogel = [], [], 8
-afb_kogel = pygame.image.load(r"kogel.png")
+afb_kogel = pygame.image.load(r"hfst_5\opdrachten\opdracht_5\kogel.png")
 
 # Maak een pygame klok om de FPS van het spel te bepalen.
 klok = pygame.time.Clock()

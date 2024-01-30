@@ -6,18 +6,18 @@ pygame.display.set_caption('Opdracht 6')
 running = True
 
 # Maak frame aan met bepaalde grootte (gelijk aan grootte van achtergrond).
-achtergrond = pygame.image.load(r"veld.png") 
+achtergrond = pygame.image.load(r"hfst_5\opdrachten\opdracht_6\veld.png") 
 achter_breedte, achter_hoogte = achtergrond.get_width(), achtergrond.get_height()
 frame = pygame.display.set_mode((achter_breedte, achter_hoogte))
 
 # Zet speler klaar
 x_speler, y_speler, snelheid_speler = achter_breedte//2, achter_hoogte//2, 5
-afb_speler = pygame.image.load(r"speler.png")
+afb_speler = pygame.image.load(r"hfst_5\opdrachten\opdracht_6\speler.png")
 
 # Zet een lege lijst klaar waarin obstakels bewaard worden.
 # De obstakels worden bewaard als pygame Rects (zie regel 48) om collisie met speler te detecteren.
 obstakels = []
-afb_obstakel = pygame.image.load(r"obstakel.png")
+afb_obstakel = pygame.image.load(r"hfst_5\opdrachten\opdracht_6\obstakel.png")
 
 # Maak een pygame klok om de FPS van het spel te bepalen.
 klok = pygame.time.Clock()
