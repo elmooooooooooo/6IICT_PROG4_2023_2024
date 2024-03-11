@@ -5,7 +5,7 @@ def optellen(getal):
         print(getal)
         return
     
+    #print(getal) # 123
     optellen(getal+1)
-    print(getal)
-
+    print(getal) # 321
 optellen(1)
